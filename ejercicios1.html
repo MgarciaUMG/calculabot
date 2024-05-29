@@ -32,13 +32,25 @@
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Username" aria-label="Username"
                                     id="val1-ejercicio5">
-                                <span class="input-group-text">@</span>
+                                <span class="input-group-text">/</span>
                                 <input type="text" class="form-control" placeholder="Server" aria-label="Server"
                                     id="val2-ejercicio5">
                             </div>
+                            <div id="Ejercicio5_errorr" class="">
+                                <div class="alert alert-success" role="alert">
+                                    <h4 class="alert-heading">Well done!</h4>
+                                    <p>Aww yeah, you successfully read this important alert message. This example text
+                                        is going to run a bit longer so that you can see how spacing within an alert
+                                        works with this kind of content.</p>
+                                    <hr>
+                                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things
+                                        nice and tidy.</p>
+                                </div>
+
+                            </div>
                             <p id="ejercicio5-error1">
 
-                                
+
 
                             </p>
                             <a onclick="respuestaejercicio5()" class="btn btn-primary">Facil</a>
@@ -56,12 +68,39 @@
                     </h2>
                     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">
+                                Launch static backdrop modal
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi officiis molestiae eius neque mollitia velit cupiditate, voluptas perspiciatis officia possimus ipsam nam, dicta, ad ratione saepe animi magnam asperiores quam?
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolore voluptatum nemo ipsa praesentium harum illum, similique numquam, fuga eos, tenetur explicabo minima deleniti blanditiis dignissimos quas sit quod expedita.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas iure nesciunt corrupti. Nesciunt inventore distinctio sunt nobis, fugit dolores, voluptate error vitae molestias rerum quia pariatur necessitatibus quisquam cumque.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi cumque exercitationem delectus expedita consequuntur ipsa soluta quos ut impedit sequi optio, excepturi id iste velit. Natus, eligendi. Asperiores, voluptas tempora!
+                                            <img src="img/ef1.jpeg" class="img-fluid" alt="...">
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Understood</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -139,15 +178,18 @@
             var e5_val2 = document.getElementById("val2-ejercicio5").value;
             var e5_r1 = "-20";
             var e5_r2 = "4x-3";
+            var e5_e5 = document.getElementById("Ejercicio5_errorr");
 
 
             if (e5_val1 == e5_r1 && e5_val2 == e5_r2) {
 
-                alert("correcto");
+                e5_e5.className = "d-none";
+
 
             } else {
 
-        document.getElementById("ejercicio5-error1").textContent = "El error es x";
+                e5_e5.className = "";
+
 
             }
 
